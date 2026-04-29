@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Artists Portfolio</title>
+    <style>
+        /* Genel Tasarım - Karanlık Tema */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+        }
+        
+        /* Üst Başlık Kısmı */
+        header {
+            text-align: center;
+            padding: 80px 20px;
+            background-color: #161b22;
+            border-bottom: 1px solid #30363d;
+        }
+        h1 {
+            color: #58a6ff;
+            font-size: 3rem;
+            margin-bottom: 10px;
+            margin-top: 0;
+        }
+        p.subtitle {
+            font-size: 1.2rem;
+            color: #8b949e;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Portfolyo Izgarası */
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        .container h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #fff;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        /* Kart Tasarımları */
+        .card {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #58a6ff;
+        }
+        .card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            background: #21262d;
+            border-bottom: 1px solid #30363d;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .card h3 {
+            margin: 0 0 10px 0;
+            color: #fff;
+            font-size: 1.4rem;
+        }
+        .card p {
+            margin: 0;
+            font-size: 1rem;
+            color: #8b949e;
+            line-height: 1.5;
+        }
+
+        /* Alt Bilgi (Footer) */
+        footer {
+            text-align: center;
+            padding: 50px 20px;
+            margin-top: 60px;
+            background-color: #161b22;
+            border-top: 1px solid #30363d;
+        }
+        a.btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #238636;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-top: 20px;
+            transition: background 0.2s;
+        }
+        a.btn:hover {
+            background: #2ea043;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- İSİMLERİNİZİ BURAYA YAZIN -->
+        <h1>[Senin Adın] & [Arkadaşının Adı]</h1>
+        <p class="subtitle">We are two 3D Artists specialized in Blender modeling, texturing, and rigging. We create game-ready assets and characters.</p>
+    </header>
+
+    <div class="container">
+        <h2>Featured Works</h2>
+        <div class="grid">
+            
+            <!-- 1. Proje (Astral Forge) -->
+            <div class="card">
+                <!-- RESMİN ADINI BURAYA YAZ -->
+                <img src="leviathan.jpg" alt="Leviathan Render">
+                <div class="card-content">
+                    <h3>Leviathan (Astral Forge)</h3>
+                    <p>3D modeling and complex rigging for a serpentine sea monster. Designed for an Unreal Engine game project.</p>
+                </div>
+            </div>
+
+            <!-- 2. Proje (Tufi Bar) -->
+            <div class="card">
+                <!-- RESMİN ADINI BURAYA YAZ -->
+                <img src="tufi.jpg" alt="Medieval Props">
+                <div class="card-content">
+                    <h3>Medieval Tavern Props</h3>
+                    <p>Stylized, low-poly environmental assets and props modeled and textured for a first-person management prototype.</p>
+                </div>
+            </div>
+
+            <!-- 3. Proje (Karakter veya Diğer Modeller) -->
+            <div class="card">
+                <!-- RESMİN ADINI BURAYA YAZ -->
+                <img src="character.jpg" alt="Character Model">
+                <div class="card-content">
+                    <h3>Character Modeling</h3>
+                    <p>Character topology creation using plane-modeling techniques and detailed texturing workflow.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <h2 style="color: #fff; margin-bottom: 10px;">Ready to collaborate?</h2>
+        <p style="color: #8b949e; margin-bottom: 20px;">We are open to freelance projects and studio roles.</p>
+        <!-- MAİL ADRESİNİ BURAYA YAZ -->
+        <a href="mailto:seninmailin@gmail.com" class="btn">Contact Us</a>
+    </footer>
+
+</body>
+</html>
