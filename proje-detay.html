@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proje Detayı - Portfolyom</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="translations.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Portfolyo</div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link" data-i18n="nav.backToHome">Ana Sayfaya Dön</a></li>
+            </ul>
+            <button id="lang-toggle" class="lang-toggle" aria-label="Dil Değiştir">
+                <span class="lang-text" data-i18n="nav.langToggle">TR</span>
+            </button>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Tema Değiştir" data-i18n-aria="nav.themeToggle">
+                <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Proje Detay -->
+    <section class="project-detail-section">
+        <div class="container">
+            <div class="project-detail-header">
+                <div class="project-detail-logo">
+                    <img src="images/basaban-logo.png" alt="Proje Logo">
+                </div>
+                <div class="project-detail-info">
+                    <h1 class="project-detail-title">Basaban</h1>
+                    <p class="project-detail-platform"><strong>Platform:</strong> Android</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.Order66Studios.Basaban&hl=tr" class="google-play-button" target="_blank">
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="currentColor" d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
+                        </svg>
+                        <span data-i18n="detail.googlePlay">Google Play'de İncele</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-detail-content">
+                <div class="project-description-section">
+                    <h2 data-i18n="detail.aboutProject">Proje Hakkında</h2>
+                    <p data-i18n="detail.description">3B bir puzzle oyunudur. Oyuncu, zorlu bulmacaları çözerek ilerler ve yeni seviyelerin kilidini açar. Oynanış Seviyelerdeki kutuları aynı renkteki piyonlara itmeye çalışır.</p>
+                    
+                    <h3 data-i18n="detail.features">Özellikler</h3>
+                    <ul>
+                        <li data-i18n="detail.feature1">İlk projem!</li>
+                        <li data-i18n="detail.feature2">45+ Benzersiz Seviye - Her seviye farklı bir mücadele!</li>
+                        <li data-i18n="detail.feature3">Özelleştirme Sistemi - Karakterinizin tacını özelleştirin ve tarzınızı yansıtın!</li>
+                        <li data-i18n="detail.feature4">Otomatik Kaydetme - İlerlemeniz her zaman güvende!</li>
+                    </ul>
+
+                    <h3 data-i18n="detail.technologies">Kullanılan Teknolojiler</h3>
+                    <div class="tech-tags">
+                        <span class="tag">Unity</span>
+                        <span class="tag">Blender</span>
+                        <span class="tag">Visual Studio</span>
+                    </div>
+                </div>
+
+                <div class="project-gallery">
+                    <h2 data-i18n="detail.gallery">Proje Görselleri</h2>
+                    <div class="detail-gallery">
+                        <div class="detail-gallery-item">
+                            <img src="images/basaban-screenshot1.png" alt="Proje Resim 1">
+                        </div>
+                        <div class="detail-gallery-item">
+                            <img src="images/basaban-screenshot2.png" alt="Proje Resim 2">
+                        </div>
+                        <div class="detail-gallery-item">
+                            <img src="images/basaban-screenshot3.png" alt="Proje Resim 3">
+                        </div>
+                        <div class="detail-gallery-item">
+                            <img src="images/basaban-screenshot4.png" alt="Proje Resim 4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="back-button-container">
+                <a href="https://play.google.com/store/apps/details?id=com.Order66Studios.Basaban&hl=tr" class="google-play-button-large" target="_blank">
+                    <svg viewBox="0 0 24 24" width="28" height="28">
+                        <path fill="currentColor" d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
+                    </svg>
+                    <span data-i18n="detail.googlePlayDownload">Google Play'den İndir</span>
+                </a>
+                <a href="index.html#projelerim" class="back-button" data-i18n="detail.backToProjects">← Projelere Geri Dön</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Portfolyom. <span data-i18n="footer.copyright">Tüm hakları saklıdır.</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

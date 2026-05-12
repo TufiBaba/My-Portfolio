@@ -1,235 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Burak - Portfolio</title>
-    <style>
-        /* Genel Tasarım - Karanlık Tema */
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0d1117;
-            color: #c9d1d9;
-        }
-
-        /* Üst Başlık Kısmı */
-        header {
-            text-align: center;
-            padding: 80px 20px;
-            background-color: #161b22;
-            border-bottom: 1px solid #30363d;
-        }
-
-        h1 {
-            color: #58a6ff;
-            font-size: 3rem;
-            margin-bottom: 10px;
-            margin-top: 0;
-        }
-
-        p.subtitle {
-            font-size: 1.2rem;
-            color: #8b949e;
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        /* Portfolyo Izgarası */
-        .container {
-            max-width: 1100px;
-            margin: 50px auto;
-            padding: 0 20px;
-        }
-
-            .container h2 {
-                text-align: center;
-                font-size: 2rem;
-                margin-bottom: 40px;
-                color: #fff;
-            }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        /* Kart Tasarımları */
-        .card {
-            background: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 10px;
-            overflow: hidden;
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-
-            .card:hover {
-                transform: translateY(-8px);
-                border-color: #58a6ff;
-            }
-
-            .card img {
-                width: 100%;
-                height: 280px;
-                object-fit: cover;
-                background: #21262d;
-                border-bottom: 1px solid #30363d;
-                cursor: pointer; /* Fare imlecini el işaretine çevirir */
-                transition: opacity 0.3s;
-            }
-
-                .card img:hover {
-                    opacity: 0.8;
-                }
-
-        .card-content {
-            padding: 15px;
-            text-align: center;
-        }
-
-        .card h3 {
-            margin: 0;
-            color: #fff;
-            font-size: 1.4rem;
-        }
-
-        /* Alt Bilgi (Footer) */
-        footer {
-            text-align: center;
-            padding: 50px 20px;
-            margin-top: 60px;
-            background-color: #161b22;
-            border-top: 1px solid #30363d;
-        }
-
-        .contact-email {
-            color: #58a6ff;
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-
-            .contact-email:hover {
-                text-decoration: underline;
-            }
-
-        /* Büyütülen Resim (Modal) Tasarımı */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.85); /* Yarı saydam siyah arkaplan */
-        }
-
-        .modal-content {
-            margin: auto;
-            display: block;
-            max-width: 90%;
-            max-height: 90vh;
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
-            object-fit: contain; /* Resmin tamamının sığmasını sağlar */
-        }
-
-        .close {
-            position: absolute;
-            top: 20px;
-            right: 40px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-            .close:hover {
-                color: #58a6ff;
-            }
-    </style>
+    <title>Portfolyom</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="translations.js"></script>
 </head>
 <body>
-
-    <header>
-        <h1>Merhaba, Ben Burak</h1>
-        <p class="subtitle">Gelişmekte Olan Bağımsız Geliştirici</p>
-    </header>
-
-    <div class="container">
-        <h2>Featured Works</h2>
-        <div class="grid">
-
-            <!-- 1. Proje -->
-            <div class="card">
-                <img src="Axe.png" alt="Axe Model" class="zoom-img">
-                <div class="card-content">
-                    <h3>Axe</h3>
-                </div>
-            </div>
-
-            <!-- 2. Proje -->
-            <div class="card">
-                <img src="Dango.png" alt="Dango Model" class="zoom-img">
-                <div class="card-content">
-                    <h3>Dango</h3>
-                </div>
-            </div>
-
-            <!-- 3. Proje -->
-            <div class="card">
-                <img src="Hammer.png" alt="Hammer Model" class="zoom-img">
-                <div class="card-content">
-                    <h3>Hammer</h3>
-                </div>
-            </div>
-
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Portfolyo</div>
+            <ul class="nav-menu">
+                <li><a href="#anasayfa" class="nav-link" data-i18n="nav.home">Anasayfa</a></li>
+                <li><a href="#hakkimda" class="nav-link" data-i18n="nav.about">Hakkımda</a></li>
+                <li><a href="#modellerim" class="nav-link" data-i18n="nav.models">Modellerim</a></li>
+                <li><a href="#projelerim" class="nav-link" data-i18n="nav.projects">Projelerim</a></li>
+                <li><a href="#iletisim" class="nav-link" data-i18n="nav.contact">İletişim</a></li>
+            </ul>
+            <button id="lang-toggle" class="lang-toggle" aria-label="Dil Değiştir">
+                <span class="lang-text" data-i18n="nav.langToggle">TR</span>
+            </button>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Tema Değiştir" data-i18n-aria="nav.themeToggle">
+                <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
         </div>
-    </div>
+    </nav>
 
-    <footer>
-        <h2 style="color: #fff; margin-bottom: 20px;">Contact me</h2>
-        <a href="mailto:buraktufan002@gmail.com" class="contact-email">buraktufan002@gmail.com</a>
+    <!-- Ana Sayfa -->
+    <section id="anasayfa" class="section hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title" data-i18n="hero.title">Merhaba, Ben Burakr</h1>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">Bağımsız Geliştirici</p>
+            <a href="#projelerim" class="cta-button" data-i18n="hero.cta">Projelerimi Keşfet</a>
+        </div>
+    </section>
+
+    <!-- Hakkımda -->
+    <section id="hakkimda" class="section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="about.title">Hakkımda</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-i18n="about.text1">Merhaba! Ben Burak, Modelleme ve yazılım tutkunu bir geliştiriciyim.</p>
+                    <p data-i18n="about.text2">Hem 3B alanda hem 2B alanda çalışmayı severim. Modelleme yapmayı, kod yazmayı ve yeni projeler geliştirmeyi seviyorum.</p>
+                    <p data-i18n="about.text3">Her zaman yeni şeyler öğrenmeye açığım ve yaratıcı projelerde yer almak için sabırsızlanıyorum.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Modellerim -->
+    <section id="modellerim" class="section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="models.title">Modellerim</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="images/Model1.png" alt="Model 1">
+                    <div class="gallery-overlay">
+                        <h3 data-i18n="models.overlay1">Model 1 açıklama</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Model2.png" alt="Model 2">
+                    <div class="gallery-overlay">
+                        <h3 data-i18n="models.overlay2">Model 2 açıklama</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Model3.png" alt="Model 3">
+                    <div class="gallery-overlay">
+                        <h3 data-i18n="models.overlay3">Model 3 açıklama</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projelerim -->
+    <section id="projelerim" class="section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="projects.title">Projelerim</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <div class="project-logo">
+                        <img src="images/basaban-logo.png" alt="Proje Logo">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-name" data-i18n="projects.name">Basaban</h3>
+                        <p class="project-platform" data-i18n="projects.platform">Platform: Android</p>
+                        <p class="project-description" data-i18n="projects.description">3B Bir Puzzle Oyunu</p>
+                        <a href="proje-detay.html" class="project-button" data-i18n="projects.button">DAHA FAZLA BİLGİ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim -->
+    <section id="iletisim" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="contact.title">İletişim</h2>
+            <div class="contact-content">
+                <p class="contact-text" data-i18n="contact.text">Benimle iletişime geçmek isterseniz:</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <strong data-i18n="contact.email">E-posta:</strong>
+                        <a href="mailto:buraktufan002@gmail.com">buraktufan002@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong data-i18n="contact.social">Sosyal Medya:</strong>
+                        <div class="social-links">
+                            <a href="https://x.com/crazytufi" target="_blank">Twitter</a>
+                            <a href="https://www.instagram.com/tfnbrk/" target="_blank">Instagram</a>
+                            <a href="https://github.com/TufiBaba" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Portfolyom. <span data-i18n="footer.copyright">Tüm hakları saklıdır.</span></p>
     </footer>
 
-    <!-- Resmi Büyütmek İçin Gizli Modal Penceresi -->
-    <div id="imageModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="expandedImg">
-    </div>
-
-    <!-- Tıklama İşlemleri İçin Javascript -->
-    <script>
-        const modal = document.getElementById("imageModal");
-        const modalImg = document.getElementById("expandedImg");
-        const images = document.querySelectorAll(".zoom-img");
-        const span = document.getElementsByClassName("close")[0];
-
-        // Resimlere tıklanınca modali aç ve resmi aktar
-        images.forEach(img => {
-            img.onclick = function(){
-                modal.style.display = "block";
-                modalImg.src = this.src;
-            }
-        });
-
-        // Çarpı ikonuna basınca kapat
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        // Resmin dışındaki karanlık alana tıklayınca kapat
-        modal.onclick = function(e) {
-            if(e.target !== modalImg) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
