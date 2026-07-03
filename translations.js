@@ -29,6 +29,7 @@ const translations = {
         'models.overlay1': 'Stilize Fantezi Savaş Baltası',
         'models.overlay2': 'Low-Poly Karakter',
         'models.overlay3': 'Modüler Geçit',
+        'models.overlay4': 'Modüler Sütun Seti',
 
         // Projects Section
         'projects.title': 'Projelerim',
@@ -89,6 +90,7 @@ const translations = {
         'models.overlay1': 'Stylized Fantasy Battle Axe',
         'models.overlay2': 'Low-Poly Character',
         'models.overlay3': 'Modular Gateway',
+        'models.overlay4': 'Modular Pillar Set',
         
         // Projects Section
         'projects.title': 'My Projects',
